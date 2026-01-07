@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deep | Data Analyst & UI/UX Designer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h2 class="logo">Deep Malviya</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Hi, I'm <span>Deep Malviya</span></h1>
+  <p>Data Analyst & UI/UX Developer</p>
+  <button class="hero-btn" onclick="scrollToSection()">View Projects</button>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate Data Analyst and UI/UX Developer who loves converting
+    data into insights and designing user-friendly interfaces.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skill-box">
+    <div>Python</div>
+    <div>SQL</div>
+    <div>C</div>
+    <div>Figma</div>
+    <div>Excel</div>
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>JavaScript</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects">
+    <!-- UI/UX -->
+    <a href="uiux-projects.html" class="card project-link">
+      <h3>UI / UX Projects</h3>
+      <p>Modern mobile & web UI designs using Figma and UX principles.</p>
+      <span class="view-text">View Projects →</span>
+    </a>
+
+    <!-- Data Analyst -->
+    <a href="data-projects.html" class="card project-link">
+      <h3>Data Analyst Projects</h3>
+      <p>Data analysis, dashboards, insights using Python, SQL & Power BI.</p>
+      <span class="view-text">View Projects →</span>
+    </a>
+
+    <!-- Other Projects -->
+    <a href="other-projects.html" class="card project-link">
+      <h3>Other Projects</h3>
+      <p>Experimental and creative projects including AI-based applications.</p>
+      <span class="view-text">View Projects →</span>
+    </a>
+  </div>
+</section>
+
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: 39deepmalaviya1008@gmail.com</p>
+  <p>LinkedIn | GitHub</p>
+</section>
+
+<footer>© 2025 Deep | Portfolio</footer>
+
+<button id="backToTop" onclick="scrollToTop()">↑</button>
+
+<script>
+function scrollToSection() {
+  document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+}
+
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  backToTop.style.display = window.scrollY > 300 ? "flex" : "none";
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
