@@ -186,7 +186,7 @@ section h2::after{
 #about{
   text-align:center;
   padding:80px 20px;
-  background:#f3f5fa;
+  background: #E8EBF1;
 }
 
 #about p{
@@ -232,7 +232,7 @@ section h2::after{
 #skills{
   text-align:center;
   padding:60px 20px;
-  background:#f3f5fa;
+  background: #E8EBF1;;
 }
 
 .skill-box{
@@ -319,7 +319,7 @@ section h2::after{
 
 #projects{
   padding:80px 20px;
-  background:linear-gradient(180deg,#f6f8fc,#eef1f7);
+  background: #E8EBF1;;
 }
 
 /* Section Title */
@@ -433,6 +433,7 @@ section h2::after{
 /* ================= CONTACT ================= */
 #contact{
   text-align:center;
+  background: #E8EBF1;
 }
 #contact h2{
   color:#6b5b95;
