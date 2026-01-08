@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deep | Portfolio</title>
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deep | Data Analyst & UI/UX Designer</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header class="main-header">
-  <a href="index.html" class="logo">Deep Malviya</a>
-  <nav class="nav-links">
+<header>
+  <h2 class="logo">Deep Malviya</h2>
+  <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
@@ -24,27 +22,15 @@
 <section class="hero">
   <h1>Hi, I'm <span>Deep Malviya</span></h1>
   <p>Data Analyst & UI/UX Developer</p>
-
-  <div class="hero-actions">
-    <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
-      View Projects
-  </div>
+  <button class="hero-btn" onclick="scrollToSection()">View Projects</button>
 </section>
 
-<section id="about" class="fade">
+<section id="about">
   <h2>About Me</h2>
   <p>
-    Passionate Data Analyst & UI/UX Designer who loves turning data into
-    meaningful insights and building elegant interfaces.
+    I am a passionate Data Analyst and UI/UX Developer who loves converting
+    data into insights and designing user-friendly interfaces.
   </p>
-  <div class="resume-actions">
-  <a href="resume.pdf" target="_blank" class="resume-btn">
-    👁 View Resume
-  </a>
-  <a href="resume.pdf" download class="resume-btn outline">
-    ⬇ Download Resume
-  </a>
-</div>
 </section>
 
 <section id="skills" class="skills-section fade">
@@ -68,40 +54,54 @@
   <h2>Projects</h2>
 
   <div class="projects">
-    
-    <div class="card">
+    <!-- UI/UX -->
+    <a href="uiux-projects.html" class="card project-link">
       <h3>UI / UX Projects</h3>
       <p>Modern mobile & web UI designs using Figma and UX principles.</p>
-      <a href="uiux-projects.html">View Projects →</a>
-    </div>
+      <span class="view-text">View Projects →</span>
+    </a>
 
-    <div class="card">
+    <!-- Data Analyst -->
+    <a href="data-projects.html" class="card project-link">
       <h3>Data Analyst Projects</h3>
-      <p>Data analysis, visualization, and insights using real-world datasets.</p>
-      <a href="data-projects.html">View Projects →</a>
-    </div>
+      <p>Data analysis, dashboards, insights using Python, SQL & Power BI.</p>
+      <span class="view-text">View Projects →</span>
+    </a>
 
-    <div class="card">
+    <!-- Other Projects -->
+    <a href="other-projects.html" class="card project-link">
       <h3>Other Projects</h3>
-      <p>Creative and technical projects showcasing problem-solving skills.</p>
-      <a href="other-projects.html">View Projects →</a>
-    </div>
-
+      <p>Experimental and creative projects including AI-based applications.</p>
+      <span class="view-text">View Projects →</span>
+    </a>
   </div>
 </section>
 
-<section id="contact" class="fade">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:39deepmalaviya1008@gmail.com">39deepmalaviya1008@gmail.com</a></p>
-  <div class="socials">
-    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-  </div>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: 39deepmalaviya1008@gmail.com</p>
+  <p>LinkedIn | GitHub</p>
 </section>
 
-<footer class="main-footer">
-  © 2025 Deep Malviya · Designed & Built by Me
-</footer>
+<footer>© 2025 Deep | Portfolio</footer>
+
+<button id="backToTop" onclick="scrollToTop()">↑</button>
+
+<script>
+function scrollToSection() {
+  document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+}
+
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  backToTop.style.display = window.scrollY > 300 ? "flex" : "none";
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+</script>
 
 </body>
 </html>
