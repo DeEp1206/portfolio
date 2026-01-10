@@ -23,54 +23,78 @@ main{
 }
 
 /* ================= HEADER ================= */
+/* ================= HEADER (GLOBAL) ================= */
 .main-header{
-  position:sticky;
-  top:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 80px;
-  background:rgba(255,255,255,0.75);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(0,0,0,0.06);
-  z-index:1000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 80px;
 }
 
 .logo{
-  font-size:1.9rem;
-  font-weight:700;
-  color:#6b5b95;
-  text-decoration:none;
-  letter-spacing:.5px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #6b5b95;
+  text-decoration: none;
+}
+
+.nav-links{
+  display: flex;
+  gap: 28px;
 }
 
 .nav-links a{
-  margin-left:28px;
-  text-decoration:none;
-  color:#444;
-  font-weight:500;
-  position:relative;
-  transition:.3s;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  font-size: 15px;
+  position: relative;
 }
 
+/* underline hover */
 .nav-links a::after{
-  content:"";
-  position:absolute;
-  width:0;
-  height:2px;
-  background:linear-gradient(90deg,#ff7f50,#feb236);
-  bottom:-6px;
-  left:0;
-  transition:.35s;
-}
-
-.nav-links a:hover{
-  color:#6b5b95;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg,#ff7f50,#feb236);
+  transition: .35s;
 }
 
 .nav-links a:hover::after{
-  width:100%;
+  width: 100%;
+}
+
+/* ================= MOBILE HEADER (SAME AS HOME) ================= */
+@media (max-width: 768px){
+
+  .main-header{
+    flex-direction: column;
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .logo{
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .nav-links{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
 }
 
 /* ================= HERO ================= */
@@ -392,10 +416,40 @@ section h2::after{
 
 
 /* ================= CONTACT ================= */
-#contact{
-  text-align:center;
-  background:#ECEFF5;
+/* Contact Section */
+#contact {
+  padding: 70px 10%;
+  text-align: center;
+  background:#ECEFF5
 }
+
+#contact p {
+  word-break: break-word;
+  font-size: 15px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.socials a {
+  font-size: 26px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .socials {
+    gap: 18px;
+  }
+
+  #contact p {
+    font-size: 14px;
+  }
+}
+
 
 /* ================= FOOTER ================= */
 .main-footer{
@@ -479,6 +533,64 @@ section h2::after{
   animation:fadeUp .8s ease;
   text-align:left; /* keeps paragraph readable */
 }
+/* ================= FINAL MOBILE POLISH ================= */
+@media (max-width: 600px) {
+
+  /* HEADER */
+  .main-header {
+    padding: 14px 16px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  /* SECTION HEADINGS */
+  section h2 {
+    font-size: 1.6rem;       /* prevent ugly line breaks */
+    line-height: 1.3;
+  }
+
+  section h2::after {
+    margin-top: 10px;
+  }
+
+  /* PAGE SECTION (Data Projects) */
+  .page-section {
+    padding: 50px 16px;
+  }
+
+  /* PROJECT GRID */
+  .projects {
+    gap: 22px;
+  }
+
+  /* PROJECT CARD */
+  .projects .card {
+    padding: 26px 22px;
+    max-width: 100%;
+  }
+
+  .projects .card h3 {
+    font-size: 1.3rem;
+    line-height: 1.35;
+  }
+
+  .projects .card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .view-text {
+    font-size: 1rem;
+  }
+}
+
 
 /* ===== Project Headings (Centered + Cool Look) ===== */
 .project-wrapper h3{
