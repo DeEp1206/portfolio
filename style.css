@@ -14,7 +14,7 @@ body{
   min-height:100vh;
   display:flex;
   flex-direction:column;
-  background:radial-gradient(circle at top,#f7f9fc,#eaeef5);
+  background:#ECEFF5;
   color:#333;
 }
 
